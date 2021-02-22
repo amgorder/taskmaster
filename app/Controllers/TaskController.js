@@ -11,6 +11,9 @@ function _draw() {
 }
 
 
+
+
+
 export default class TaskController {
 
     constructor() {
@@ -21,24 +24,20 @@ export default class TaskController {
 
     create(event) {
         event.preventDefault()
-        let form = event.target
-        let newTask = {
-            title: form.title.value
+        let yes = confirm('Are you sure?');
+        if (yes == true) {
+            let form = event.target
+            let newTask = {
+                title: form.title.value
+            }
+            taskService.create(newTask)
         }
-        taskService.create(newTask)
     }
 
     delete(taskId) {
-        taskService.delete(taskId)
+        let yes = confirm('Are you sure?');
+        if (yes == true) {
+            taskService.delete(taskId)
+        }
     }
-
-    confirm() {
-        confirm("Create Task?");
-    }
-    modal(event) {
-        event.preventDefault()
-        console.log('modal call');
-
-    }
-
 }
