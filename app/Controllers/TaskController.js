@@ -1,0 +1,44 @@
+import { ProxyState } from "../AppState.js";
+import { taskService } from "../Services/TaskService.js"
+
+
+function _draw() {
+
+    let taskElem = document.getElementById("tasks")
+    let template = ""
+    ProxyState.tasks.forEach(task => template += task.Template)
+    taskElem.innerHTML = template
+}
+
+
+export default class TaskController {
+
+    constructor() {
+        ProxyState.on('tasks', _draw)
+        ProxyState.on('todos', _draw)
+
+    }
+
+    create(event) {
+        event.preventDefault()
+        let form = event.target
+        let newTask = {
+            title: form.title.value
+        }
+        taskService.create(newTask)
+    }
+
+    delete(taskId) {
+        taskService.delete(taskId)
+    }
+
+    confirm() {
+        confirm("Create Task?");
+    }
+    modal(event) {
+        event.preventDefault()
+        console.log('modal call');
+
+    }
+
+}
