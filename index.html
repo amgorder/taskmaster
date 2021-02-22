@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./node_modules/rpg-awesome/css/rpg-awesome.min.css">
+    <title>taskmaster</title>
+</head>
+
+<body>
+    <header>
+        <nav class="container-fluid navbar navbar-dark navbar-expand bg-danger text-dark">
+            <a class="navbar-brand" href="#">
+                <span class="ml-5">
+                    <h1 class="text-dark">Task Master:<small class="text-muted">To Do stuff</small>
+                    </h1>
+                </span>
+            </a>
+
+
+            <div class="row ">
+            </div>
+
+        </nav>
+    </header>
+    <main class="bg-dark">
+        <div class="container-fluid">
+
+
+            <div class="col-12 mt-3 justify-content-end">
+                <form onsubmit="app.taskController.create(event)">
+                    <div class="form-group">
+                        <input type="text" name="title" placeholder="Enter Task Here..." maxlength="15">
+                        <button onclick="confirm()" id="myBtn" class="btn-dark btn-outline-danger" type="submit">NEW
+                            TASK</button>
+
+
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <p>create new task</p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <hr>
+            <div class="modal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row " id="tasks">
+                <div class="col-12">
+                    <h1 class="${this.title.includes('extra') ? 'text-danger': ''}">${this.title} <button type="button"
+                            class="text-danger close mt-3" onclick="app.todoController.delete('${this.id}')">
+                            <span>&times;</span> </button> </h1>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="container-fluid bg-danger text-light">
+        <div class="row text-center">
+            <div class="col">
+                <p></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    </script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
