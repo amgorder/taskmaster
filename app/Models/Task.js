@@ -20,7 +20,7 @@ export default class Task {
         <h5>New To Do</h5>
         <form onsubmit="app.todoController.create(event, '${this.id}')">
             <div class="form-group">
-                <input type="text" name="title" placeholder="Enter To Do Here...">
+                <input  type="text" name="title" minlength="3char" maxlength="50char" placeholder="Enter To Do Here...">
                 <button class="btn btn-success btn-sm" type="submit"> <i class="fa fa-plus" aria-hidden="true"></i></button>
                 <div class="row">
                     ${this.Todo}
