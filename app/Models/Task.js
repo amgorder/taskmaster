@@ -18,7 +18,7 @@ export default class Task {
         <h1>${this.title}<button class="text-danger close mt-2"
                 onclick="app.taskController.delete('${this.id}')"><span>&times;</span></button></h1>
         <h5>New To Do</h5>
-        <form onsubmit="app.todoController.create(event, '${this.id}')">
+        <form onsubmit="app.todosController.create(event, '${this.id}')">
             <div class="form-group">
                 <input  type="text" name="title" minlength="3char" maxlength="50char" placeholder="Enter To Do Here...">
                 <button class="btn btn-success btn-sm" type="submit"> <i class="fa fa-plus" aria-hidden="true"></i></button>

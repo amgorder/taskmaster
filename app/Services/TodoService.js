@@ -12,6 +12,7 @@ class TodoService {
     }
 
     delete(todoId) {
+        debugger
         ProxyState.todos = ProxyState.todos.filter(t => t.id != todoId)
     }
 
