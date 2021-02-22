@@ -1,6 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { generateId } from "../Utils/GenerateId.js";
-import ToDo from "./Todo.js"
+import ToDo from "../Models/Todo.js"
 
 
 

@@ -36,7 +36,8 @@
             <div class="col-12 mt-3 justify-content-end">
                 <form onsubmit="app.taskController.create(event)">
                     <div class="form-group">
-                        <input type="text" name="title" placeholder="Enter Task Here..." maxlength="15char">
+                        <input type="text" name="title" placeholder="Enter Task Here..." minlength="3char"
+                            maxlength="15char">
                         <button id="myBtn" class="btn-dark btn-outline-danger" type="submit">NEW TASK</button>
                     </div>
                 </form>
