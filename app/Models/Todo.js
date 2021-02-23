@@ -13,7 +13,7 @@ export default class ToDo {
     get Template() {
         console.log("todo template called");
         return /* html */ `
-        <div class="col">
+        <div class="col" style="background-color: ${this.color};">
 
         <h1  class="${this.title.includes('now') ? 'text-danger' : ''}">${this.title} <button type="button"
                 class="text-success close mt-3" onclick="app.todosController.lineThrough('${this.id}')">
