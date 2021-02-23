@@ -34,6 +34,11 @@ export default class TaskController {
         }
     }
 
+    strike(todoId) {
+
+
+    }
+
     delete(taskId) {
         let yes = confirm('Are you sure?');
         if (yes == true) {

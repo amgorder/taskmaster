@@ -11,6 +11,14 @@ class TodoService {
         ProxyState.todos = [new Todo(newTodo), ...ProxyState.todos]
     }
 
+    strike() {
+        let str = '${this.title}';
+        let result = str.strike();
+        document.getElementById("strike").innerHTML = result;
+    }
+
+
+
     delete(todoId) {
         debugger
         ProxyState.todos = ProxyState.todos.filter(t => t.id != todoId)

@@ -21,6 +21,8 @@ class TaskService {
         //ProxyState.tasks = [new Task(newTask), ...ProxyState.tasks]
     }
 
+
+
     delete(taskId) {
         // let temp = ProxyState.tasks
         // let taskIndex = temp.findIndex(t => t.id == taskId)

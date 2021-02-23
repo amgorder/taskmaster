@@ -20,4 +20,9 @@ export default class TodoController {
     delete(todoId) {
         todoService.delete(todoId)
     }
+
+    strike() {
+
+
+    }
 }
