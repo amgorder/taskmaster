@@ -12,8 +12,10 @@ export default class TodoController {
         let form = event.target
         let newTodo = {
             title: form.title.value,
-            taskId: taskId
+            taskId: taskId,
+            color: form.color.value
         }
+        debugger
         todoService.create(newTodo)
     }
 
@@ -21,7 +23,8 @@ export default class TodoController {
         todoService.delete(todoId)
     }
 
-    strike() {
+    lineThrough(todoId) {
+        todoService.lineThrough()
 
 
     }

@@ -28,21 +28,21 @@ export default class TaskController {
         if (yes == true) {
             let form = event.target
             let newTask = {
-                title: form.title.value
+                title: form.title.value,
             }
+
             taskService.create(newTask)
         }
     }
-
-    strike(todoId) {
-
-
-    }
-
     delete(taskId) {
         let yes = confirm('Are you sure?');
         if (yes == true) {
             taskService.delete(taskId)
         }
     }
+
+
+
+
+
 }

@@ -11,10 +11,11 @@ class TodoService {
         ProxyState.todos = [new Todo(newTodo), ...ProxyState.todos]
     }
 
-    strike() {
+    lineThrough() {
         let str = '${this.title}';
         let result = str.strike();
-        document.getElementById("strike").innerHTML = result;
+
+
     }
 
 
